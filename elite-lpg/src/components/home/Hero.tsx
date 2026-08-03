@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { company } from "@/lib/content";
 import { StatsBar } from "@/components/home/StatsBar";
 
 export function Hero() {
@@ -68,9 +67,10 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="mt-6 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg"
           >
-            {company.name} нь LPG систем, хийн зуух, барилгын халаалт, байгаль
-            орчны инженерингийн чиглэлээр найдвартай, тогтвортой шийдлийг санал
-            болгодог.
+            &ldquo;Элит Эл Пи Жи&rdquo; ХХК нь хийн хангамжийн систем, барилгын
+            халаалтын шийдэл болон зураг төслийн цогц үйлчилгээг үзүүлж,
+            агаарын бохирдлыг бууруулах байгальд ээлтэй, тогтвортой
+            технологийг нэвтрүүлэн ажиллаж байна.
           </motion.p>
 
           {/* CTAs */}
