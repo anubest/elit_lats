@@ -58,7 +58,7 @@ export function Hero() {
             className="max-w-4xl font-heading text-5xl font-medium tracking-tight text-white sm:text-6xl lg:text-[5rem] lg:leading-[1.05]"
           >
             Бид хийн{" "}
-            <span className="text-white/40">хангамж бүтээдэг.</span>
+            <span className="text-brand">хангамж бүтээдэг.</span>
           </motion.h1>
 
           {/* Description */}
