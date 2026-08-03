@@ -1,10 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { Mail, MapPin, Phone, Globe, MessagesSquare, Briefcase, PlayCircle, ShieldCheck, Award } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { company, navLinks } from "@/lib/content";
 
 export function Footer() {
+  const t = useTranslations();
   return (
     <footer className="relative overflow-hidden bg-ink border-t border-border-dark text-white">
       <div className="absolute inset-0 bg-grid-pattern-dark opacity-10 pointer-events-none" />
@@ -28,9 +30,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
-              {company.founded} оноос хойш үйл ажиллагаа явуулж буй, хийн
-              хангамж, LPG систем, барилгын халаалт, байгаль орчны
-              инженерингийн чиглэлээр мэргэшсэн үндэсний компани.
+              {t("footer.description", { founded: company.founded })}
             </p>
             
             {/* Social Icons */}
@@ -54,11 +54,11 @@ export function Footer() {
             <div className="mt-10 flex flex-wrap gap-3">
                <div className="flex items-center gap-2 rounded-md bg-white/5 px-2.5 py-1.5 text-[11px] font-medium text-white/70 tracking-wide ring-1 ring-white/10">
                  <ShieldCheck className="h-3.5 w-3.5 text-brand" strokeWidth={2} />
-                 MNS Стандарт
+                 {t("footer.certifications.standard")}
                </div>
                <div className="flex items-center gap-2 rounded-md bg-white/5 px-2.5 py-1.5 text-[11px] font-medium text-white/70 tracking-wide ring-1 ring-white/10">
                  <Award className="h-3.5 w-3.5 text-brand" strokeWidth={2} />
-                 Мэргэшсэн Инженерүүд
+                 {t("footer.certifications.engineers")}
                </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/40">
-              Шуурхай холбоос
+              {t("footer.quickLinks")}
             </h4>
             <ul className="mt-6 space-y-3.5 text-sm">
               {navLinks.map((link) => (
@@ -75,7 +75,7 @@ export function Footer() {
                     href={link.href}
                     className="text-white/60 transition-colors hover:text-white"
                   >
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -85,18 +85,18 @@ export function Footer() {
           {/* Activities */}
           <div>
             <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/40">
-              Үйл ажиллагаа
+              {t("footer.activities")}
             </h4>
             <ul className="mt-6 space-y-3.5 text-sm">
               {[
-                { label: "Үндсэн хэрэгжүүлсэн ажил", href: "/business-activities" },
-                { label: "Татварын 1% төсөл", href: "/projects/117-surguuli" },
-                { label: "Бүх төслүүд", href: "/projects" },
-                { label: "Мэдээ мэдээлэл", href: "/news" }
+                { key: "main", href: "/business-activities" },
+                { key: "taxProject", href: "/projects/117-surguuli" },
+                { key: "allProjects", href: "/projects" },
+                { key: "news", href: "/news" }
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-white/60 transition-colors hover:text-white">
-                    {link.label}
+                    {t(`footer.activityLinks.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -106,7 +106,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-heading text-xs font-semibold uppercase tracking-widest text-white/40">
-              Холбоо барих
+              {t("footer.contact")}
             </h4>
             <ul className="mt-6 space-y-4 text-[13px] leading-relaxed text-white/60">
               <li className="flex items-start gap-3 transition-colors hover:text-white">
@@ -132,11 +132,11 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-[11px] font-medium tracking-wide text-white/40 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {company.name}. Бүх эрх хуулиар хамгаалагдсан.
+            © {new Date().getFullYear()} {company.name}. {t("footer.rightsReserved")}
           </p>
           <div className="flex items-center gap-4">
-            <Link href="#" className="transition-colors hover:text-white/80">Нууцлалын бодлого</Link>
-            <Link href="#" className="transition-colors hover:text-white/80">Үйлчилгээний нөхцөл</Link>
+            <Link href="#" className="transition-colors hover:text-white/80">{t("footer.privacyPolicy")}</Link>
+            <Link href="#" className="transition-colors hover:text-white/80">{t("footer.termsOfService")}</Link>
           </div>
         </div>
       </Container>

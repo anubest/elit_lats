@@ -233,13 +233,13 @@ export const partners = [
 ];
 
 export const navLinks = [
-  { label: "Нүүр", href: "/" },
-  { label: "Бидний тухай", href: "/about" },
-  { label: "Үйл ажиллагаа", href: "/business-activities" },
-  { label: "Төслүүд", href: "/projects" },
-  { label: "Мэдээ", href: "/news" },
-  { label: "Холбоо барих", href: "/contact" },
-];
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "activities", href: "/business-activities" },
+  { key: "projects", href: "/projects" },
+  { key: "news", href: "/news" },
+  { key: "contact", href: "/contact" },
+] as const;
 
 export const businessCategories = [
   {

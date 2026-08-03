@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { PageLoader } from "@/components/ui/PageLoader";
 import { seo } from "@/lib/content";
+import { routing } from "@/i18n/routing";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -53,14 +57,26 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  setRequestLocale(locale);
+
   return (
     <html
-      lang="mn"
+      lang={locale}
       className={`${spaceGrotesk.variable} ${inter.variable} h-full scroll-smooth antialiased`}
     >
       <body className="flex min-h-full flex-col bg-surface-warm text-ink">
@@ -77,11 +93,13 @@ export default function RootLayout({
             }),
           }}
         />
-        <PageLoader />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <BackToTop />
+        <NextIntlClientProvider>
+          <PageLoader />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <BackToTop />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

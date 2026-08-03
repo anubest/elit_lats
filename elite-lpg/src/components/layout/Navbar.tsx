@@ -2,15 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
-import { navLinks, company } from "@/lib/content";
+import { navLinks } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
+  const t = useTranslations();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -66,7 +68,7 @@ export function Navbar() {
                     : "text-white/60 hover:bg-white/5 hover:text-white"
                 )}
               >
-                {link.label}
+                {t(`nav.${link.key}`)}
               </Link>
             );
           })}
@@ -74,14 +76,9 @@ export function Navbar() {
 
         {/* Right actions */}
         <div className="hidden items-center gap-4 md:flex">
-          <a
-            href={`tel:${company.phone.split(",")[0].trim()}`}
-            className="text-[13px] font-medium text-white/60 transition-colors hover:text-white"
-          >
-            {company.phone.split(",")[0].trim()}
-          </a>
-          <Button href="/contact" className="h-8 px-4 text-xs">
-            Холбоо барих
+          <LanguageSwitcher />
+          <Button href="/calculator" className="h-8 px-4 text-xs">
+            {t("common.calculate")}
           </Button>
         </div>
 
@@ -122,14 +119,15 @@ export function Navbar() {
                         : "text-white/60 hover:bg-white/5 hover:text-white"
                     )}
                   >
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                     {active && <ArrowRight className="h-4 w-4" />}
                   </Link>
                 );
               })}
               <div className="mt-4 flex flex-col gap-2">
-                <Button href="/contact" className="w-full justify-center">
-                  Холбоо барих
+                <LanguageSwitcher />
+                <Button href="/calculator" className="w-full justify-center">
+                  {t("common.calculate")}
                 </Button>
               </div>
             </div>

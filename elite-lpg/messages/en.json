@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "activities": "Activities",
+    "projects": "Projects",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "common": {
+    "calculate": "Calculate",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "description": "A national company specializing in gas supply, LPG systems, building heating, and environmental engineering, operating since {founded}.",
+    "quickLinks": "Quick Links",
+    "activities": "Activities",
+    "activityLinks": {
+      "main": "Key Completed Projects",
+      "taxProject": "1% Tax Project",
+      "allProjects": "All Projects",
+      "news": "News & Updates"
+    },
+    "contact": "Contact",
+    "certifications": {
+      "standard": "MNS Standard",
+      "engineers": "Certified Engineers"
+    },
+    "rightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "calculatorPage": {
+    "eyebrow": "Calculate",
+    "title": "Cost Calculator",
+    "description": "A calculator tailored to your project's needs is currently in development.",
+    "comingSoonTitle": "Coming soon",
+    "comingSoonBody": "The calculator is still under development. If you need an estimate right now, please contact us directly."
+  },
+  "languageSwitcher": {
+    "mn": "Монгол",
+    "en": "English",
+    "zh": "中文"
+  }
+}

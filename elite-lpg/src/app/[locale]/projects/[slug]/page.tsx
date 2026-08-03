@@ -12,7 +12,7 @@ import { LegalReference } from "@/components/project/LegalReference";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { Container } from "@/components/ui/Container";
 import { Scale, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { projects, featuredProject } from "@/lib/content";
 
 export function generateStaticParams() {

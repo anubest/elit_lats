@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "activities": "业务活动",
+    "projects": "项目",
+    "news": "新闻",
+    "contact": "联系我们"
+  },
+  "common": {
+    "calculate": "计算",
+    "contactUs": "联系我们",
+    "learnMore": "了解更多",
+    "readMore": "阅读更多"
+  },
+  "footer": {
+    "description": "自{founded}年以来运营的国家级公司,专注于燃气供应、LPG系统、建筑供暖和环境工程领域。",
+    "quickLinks": "快速链接",
+    "activities": "业务活动",
+    "activityLinks": {
+      "main": "主要已完成项目",
+      "taxProject": "1%税收项目",
+      "allProjects": "所有项目",
+      "news": "新闻资讯"
+    },
+    "contact": "联系方式",
+    "certifications": {
+      "standard": "MNS 标准认证",
+      "engineers": "认证工程师"
+    },
+    "rightsReserved": "版权所有。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款"
+  },
+  "calculatorPage": {
+    "eyebrow": "计算",
+    "title": "费用计算器",
+    "description": "根据您项目需求定制的计算器目前正在开发中。",
+    "comingSoonTitle": "敬请期待",
+    "comingSoonBody": "计算器功能仍在开发中。如果您现在需要报价,请直接与我们联系。"
+  },
+  "languageSwitcher": {
+    "mn": "Монгол",
+    "en": "English",
+    "zh": "中文"
+  }
+}
