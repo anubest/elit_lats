@@ -37,7 +37,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-3">
           <Image
-            src="/images/brand/logo-icon.png"
+            src="/elit_lats/images/brand/logo-icon.png"
             alt="Элит Эл Пи Жи ХХК"
             width={24}
             height={24}

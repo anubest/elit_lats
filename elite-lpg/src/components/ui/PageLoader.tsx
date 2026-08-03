@@ -29,7 +29,7 @@ export function PageLoader() {
             className="relative grid h-20 w-20 place-items-center rounded-2xl bg-white/5 ring-1 ring-white/10"
           >
             <Image
-              src="/images/brand/logo-icon.png"
+              src="/elit_lats/images/brand/logo-icon.png"
               alt="Элит Эл Пи Жи"
               width={40}
               height={40}

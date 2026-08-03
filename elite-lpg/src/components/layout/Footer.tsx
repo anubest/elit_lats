@@ -16,7 +16,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 transition-opacity hover:opacity-80">
               <span className="relative grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white/5 ring-1 ring-white/10">
                 <Image
-                  src="/images/brand/logo-icon.png"
+                  src="/elit_lats/images/brand/logo-icon.png"
                   alt={company.name}
                   width={24}
                   height={24}
