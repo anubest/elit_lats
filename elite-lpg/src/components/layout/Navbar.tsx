@@ -43,7 +43,7 @@ export function Navbar() {
             height={24}
             className="h-6 w-6 object-contain"
           />
-          <span className="font-heading text-sm font-semibold tracking-tight text-white">
+          <span className="font-heading text-lg font-semibold uppercase tracking-wide text-white">
             Элит Эл Пи Жи
           </span>
         </Link>
