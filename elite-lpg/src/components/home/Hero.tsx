@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ShieldCheck, ArrowRight } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { StatsBar } from "@/components/home/StatsBar";
@@ -73,19 +73,15 @@ export function Hero() {
             технологийг нэвтрүүлэн ажиллаж байна.
           </motion.p>
 
-          {/* CTAs */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Button href="/projects" className="group">
-              Төслүүд харах
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button href="/contact" variant="outline-light" showArrow={false}>
-              Холбоо барих
+            <Button href="/calculator">
+              Халаалтын зардлаа тооцуулах уу?
             </Button>
           </motion.div>
         </Container>
