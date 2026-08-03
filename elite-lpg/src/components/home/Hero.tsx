@@ -24,7 +24,7 @@ export function Hero() {
       {/* Background with crisp overlay */}
       <motion.div style={{ y: imageY }} className="absolute inset-0 -top-[10%] h-[120%]">
         <Image
-          src="/elit_lats/images/hero/eco-gas-facility.jpg"
+          src="/images/hero/eco-gas-facility.jpg"
           alt="Элит Эл Пи Жи ХХК-ийн орчин үеийн хийн хангамжийн төв"
           fill
           priority
