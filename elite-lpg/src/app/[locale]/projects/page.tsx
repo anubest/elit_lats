@@ -70,7 +70,7 @@ export default function ProjectsPage() {
         <Container>
           <SectionHeading
             eyebrow="Үндсэн хэрэгжүүлсэн ажил"
-            title="Бүх хэрэгжүүлсэн"
+            title="Онцлох хэрэгжүүлсэн"
             highlight="төслүүд"
             description="2020 оноос өнөөг хүртэл гүйцэтгэсэн онцлох гэрээт ажлуудын жагсаалт."
           />
