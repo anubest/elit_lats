@@ -39,16 +39,16 @@ export function LegalReference() {
           ))}
         </div>
 
-        {/* Reference infographics */}
+        {/* Reference infographic */}
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
-          {t.legalDocs.map((doc, i) => (
+          {t.legalDocs.map((doc) => (
             <motion.div
               key={doc.src}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm"
+              transition={{ duration: 0.5 }}
+              className="overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm sm:col-span-1"
             >
               <div className="relative h-48 w-full">
                 <Image

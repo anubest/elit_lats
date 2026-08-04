@@ -341,14 +341,6 @@ export const taxBenefitProgram = {
       src: "/images/legal/tax-benefit-info-2.jpg",
       title: "ААНОАТ-ын тухай хуулийн 22.9 дэх заалт — тайлбар мэдээлэл",
     },
-    {
-      src: "/images/legal/tax-benefit-info-3.webp",
-      title: "Аж ахуйн нэгжийн орлогын албан татварын хөнгөлөлтийн хамрах хүрээ",
-    },
-    {
-      src: "/images/legal/tax-benefit-info-1.jpg",
-      title: "Монголын татварын алба — нийгмийн хариуцлагын хөрөнгө оруулалтын журам",
-    },
   ],
 };
 
