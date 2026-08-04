@@ -53,6 +53,35 @@ export default async function ProjectDetailPage({
     <>
       <ProjectHero project={p} />
       <ProjectOverview project={p} />
+      {isTaxBenefitCase ? (
+        <LegalReference />
+      ) : (
+        <section className="relative py-16">
+          <Container>
+            <Link
+              href={`/projects/${featuredProject.slug}`}
+              className="group flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-ink/15 bg-white/70 p-6 sm:flex-row sm:items-center"
+            >
+              <div className="flex items-start gap-4">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand/10 text-brand">
+                  <Scale className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-ink">
+                    Татварын 1%-ийн хөнгөлөлтийн хууль эрх зүйн үндэслэл
+                  </p>
+                  <p className="mt-1 text-xs text-muted">
+                    Энэ төсөл мөн адил хуулийн хүрээнд хэрэгжсэн — дэлгэрэнгүй хууль эрх зүйн лавлагааг {featuredProject.shortLabel} төслийн хуудаснаас үзнэ үү.
+                  </p>
+                </div>
+              </div>
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </Container>
+        </section>
+      )}
 
       <div className="grid gap-0 lg:grid-cols-2">
         <DetailListSection
@@ -134,35 +163,6 @@ export default async function ProjectDetailPage({
       </div>
 
       <MediaCoverage project={p} />
-      {isTaxBenefitCase ? (
-        <LegalReference />
-      ) : (
-        <section className="relative py-16">
-          <Container>
-            <Link
-              href={`/projects/${featuredProject.slug}`}
-              className="group flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-ink/15 bg-white/70 p-6 sm:flex-row sm:items-center"
-            >
-              <div className="flex items-start gap-4">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand/10 text-brand">
-                  <Scale className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold text-ink">
-                    Татварын 1%-ийн хөнгөлөлтийн хууль эрх зүйн үндэслэл
-                  </p>
-                  <p className="mt-1 text-xs text-muted">
-                    Энэ төсөл мөн адил хуулийн хүрээнд хэрэгжсэн — дэлгэрэнгүй хууль эрх зүйн лавлагааг {featuredProject.shortLabel} төслийн хуудаснаас үзнэ үү.
-                  </p>
-                </div>
-              </div>
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                <ArrowUpRight className="h-4 w-4" />
-              </span>
-            </Link>
-          </Container>
-        </section>
-      )}
       <ContactCTA />
     </>
   );
