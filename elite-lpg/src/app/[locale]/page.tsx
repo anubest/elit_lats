@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { TaxBenefitBanner } from "@/components/home/TaxBenefitBanner";
 import { BusinessActivitiesTeaser } from "@/components/home/BusinessActivitiesTeaser";
 import { FeaturedProjectTeaser } from "@/components/home/FeaturedProjectTeaser";
 import { ProjectsShowcase } from "@/components/home/ProjectsShowcase";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TaxBenefitBanner />
       <BusinessActivitiesTeaser />
       <FeaturedProjectTeaser />
       <ProjectsShowcase />
