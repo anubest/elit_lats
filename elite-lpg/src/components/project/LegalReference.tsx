@@ -40,7 +40,7 @@ export function LegalReference() {
         </div>
 
         {/* Reference infographic */}
-        <div className="mt-6 grid gap-5 sm:grid-cols-3">
+        <div className="mt-6 flex justify-center">
           {t.legalDocs.map((doc) => (
             <motion.div
               key={doc.src}
@@ -48,7 +48,7 @@ export function LegalReference() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm sm:col-span-1"
+              className="w-full max-w-sm overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm"
             >
               <div className="relative h-48 w-full">
                 <Image
