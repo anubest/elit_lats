@@ -15,7 +15,7 @@ const info = [
   { icon: Phone, label: "Утас", value: company.phone },
   { icon: Mail, label: "И-мэйл", value: company.email },
   { icon: MapPin, label: "Хаяг", value: company.address },
-  { icon: Clock, label: "Ажиллах цаг", value: "Даваа–Баасан, 09:00–18:00" },
+  { icon: Clock, label: "Ажиллах цаг", value: "24/7" },
 ];
 
 export default function ContactPage() {
