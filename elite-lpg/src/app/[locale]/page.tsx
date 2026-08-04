@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TaxBenefitBanner />
       <BusinessActivitiesTeaser />
       <FeaturedProjectTeaser />
       <ProjectsShowcase />
@@ -21,6 +20,7 @@ export default function Home() {
       <MediaCoverage />
       <WhyChooseUs />
       <Partners />
+      <TaxBenefitBanner />
       <ContactCTA />
     </>
   );
