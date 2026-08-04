@@ -9,7 +9,7 @@ export function ProjectsShowcase() {
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
-            eyebrow="Хэрэгжүүлсэн ажлууд"
+            eyebrow="Онцлох төслүүд"
             title="Түүх бүтээж,"
             highlight="итгэл олгодог."
             description="2020 оноос өнөөг хүртэл гүйцэтгэсэн онцлох гэрээт ажлууд."

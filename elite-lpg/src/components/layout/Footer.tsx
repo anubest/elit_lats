@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import { Mail, MapPin, Phone, Globe, MessagesSquare, Briefcase, PlayCircle, ShieldCheck, Award } from "lucide-react";
+import { Mail, MapPin, Phone, Globe, ShieldCheck, Award } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { Container } from "@/components/ui/Container";
 import { company, navLinks } from "@/lib/content";
 
@@ -25,24 +26,26 @@ export function Footer() {
                   className="h-6 w-6 object-contain"
                 />
               </span>
-              <span className="font-heading text-lg font-bold tracking-tight">
+              <span className="font-heading text-lg font-bold uppercase tracking-tight">
                 {company.name}
               </span>
             </Link>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
+            <p className="mt-6 max-w-sm text-sm uppercase leading-relaxed text-white/60">
               {t("footer.description", { founded: company.founded })}
             </p>
             
             {/* Social Icons */}
             <div className="mt-8 flex gap-3">
               {[
-                { Icon: MessagesSquare, href: company.socials.facebook },
-                { Icon: Briefcase, href: company.socials.linkedin },
-                { Icon: PlayCircle, href: company.socials.youtube }
+                { Icon: FaFacebookF, href: company.socials.facebook },
+                { Icon: FaLinkedinIn, href: company.socials.linkedin },
+                { Icon: FaYoutube, href: company.socials.youtube }
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-white/5 ring-1 ring-white/10 transition-colors hover:bg-white hover:ring-white"
                 >
                   <Icon className="h-4 w-4 text-white/70 transition-colors group-hover:text-ink" />

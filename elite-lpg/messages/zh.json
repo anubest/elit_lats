@@ -18,8 +18,8 @@
     "quickLinks": "快速链接",
     "activities": "业务活动",
     "activityLinks": {
-      "main": "主要已完成项目",
-      "taxProject": "1%税收项目",
+      "main": "已完成项目",
+      "taxProject": "1%税收优惠项目",
       "allProjects": "所有项目",
       "news": "新闻资讯"
     },

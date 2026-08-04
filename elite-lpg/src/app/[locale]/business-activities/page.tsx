@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Hammer, Sparkles, ArrowUpRight, ArrowDown } from "lucide-react";
-import { Link } from "@/i18n/navigation";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -9,7 +7,7 @@ import { ContactCTA } from "@/components/home/ContactCTA";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { MajorProjectsGrid } from "@/components/business/MajorProjectsGrid";
 import { Button } from "@/components/ui/Button";
-import { featuredProject, majorProjectsGallery, whyChooseGasHeating } from "@/lib/content";
+import { majorProjectsGallery, whyChooseGasHeating } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Үйл ажиллагаа",
@@ -23,92 +21,9 @@ export default function BusinessActivitiesPage() {
       <PageHero
         eyebrow="Үйл ажиллагаа"
         title="Хэрэгжүүлж буй ажлын ангилал"
-        description="Компанийн үйл ажиллагааг одоогоор хоёр үндсэн ангилалд хуваан толилуулж байна."
+        description="Компанийн хэрэгжүүлж буй үйлчилгээ, ажлын чиглэлүүдийн тойм."
         breadcrumb={[{ label: "Нүүр", href: "/" }, { label: "Үйл ажиллагаа" }]}
       />
-
-      <section className="py-20 lg:py-28">
-        <Container>
-          <div className="grid gap-8 lg:grid-cols-2">
-            {/* Category A - Major projects */}
-            <a
-              href="#major-projects"
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-white/10 bg-ink p-10 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(255,255,255,0.1)]"
-            >
-              <div className="pointer-events-none absolute inset-0">
-                <Image
-                  src="/images/hero/steel-structure.jpg"
-                  alt="Үндсэн хэрэгжүүлсэн томоохон төслүүд"
-                  fill
-                  className="object-cover opacity-25 transition-opacity duration-500 group-hover:opacity-35"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/40" />
-              </div>
-
-              <div className="relative">
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand to-brand-dark text-white shadow-[0_0_20px_rgba(244,122,32,0.3)] ring-1 ring-white/20">
-                  <Hammer className="h-7 w-7" strokeWidth={1.5} />
-                </span>
-                <h2 className="mt-8 font-heading text-2xl font-semibold text-white">
-                  Үндсэн хэрэгжүүлсэн ажил
-                </h2>
-                <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
-                  2020 оноос хойш хэрэгжүүлсэн шатахуун түгээх станц, үйлдвэр,
-                  сургууль, хийн хангамжийн угсралтын томоохон гэрээт
-                  ажлуудын жагсаалт.
-                </p>
-              </div>
-              <div className="relative mt-10 flex items-center justify-between rounded-2xl bg-white/10 px-5 py-4 backdrop-blur">
-                <span className="text-sm font-semibold text-white">
-                  Жагсаалтыг доор харах
-                </span>
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-brand text-white transition-transform group-hover:translate-y-0.5">
-                  <ArrowDown className="h-4 w-4" />
-                </span>
-              </div>
-            </a>
-
-            {/* Category B - Tax benefit featured */}
-            <Link
-              href="/projects#tax-projects"
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border-2 border-brand/40 bg-ink p-10 shadow-[0_30px_80px_-30px_rgba(244,122,32,0.5)] transition-transform duration-300 hover:-translate-y-1"
-            >
-              <div className="pointer-events-none absolute inset-0">
-                <Image
-                  src="/images/hero/boiler-room-completed.jpg"
-                  alt="Татварын 1%-ийн хөнгөлөлтөөр хэрэгжсэн төслийн хийн зуухны систем"
-                  fill
-                  className="object-cover opacity-25 transition-opacity duration-500 group-hover:opacity-35"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/40" />
-              </div>
-
-              <div className="relative">
-                <span className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br from-brand to-brand-dark text-white shadow-[0_0_20px_rgba(244,122,32,0.3)] ring-1 ring-white/20">
-                  <Sparkles className="h-7 w-7" strokeWidth={1.5} />
-                </span>
-                <h2 className="mt-8 font-heading text-2xl font-semibold text-white">
-                  Татварын 1%-ийн хөнгөлөлтөөр хэрэгжүүлсэн төсөл
-                </h2>
-                <p className="mt-4 max-w-md text-sm leading-relaxed text-white/60">
-                  ААНОАТ-ын тухай хуулийн 22.9 дэх заалтын хүрээнд, нийгмийн
-                  хариуцлагын хөрөнгө оруулалтаар хэрэгжүүлсэн, 117 дугаар
-                  сургуулийн хийн халаалтын систем рүү шилжсэн онцлох төсөл.
-                </p>
-              </div>
-
-              <div className="relative mt-10 flex items-center justify-between rounded-2xl bg-white/10 px-5 py-4 backdrop-blur">
-                <span className="text-sm font-semibold text-white">
-                  Дэлгэрэнгүй танилцах
-                </span>
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-brand text-white transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
-              </div>
-            </Link>
-          </div>
-        </Container>
-      </section>
 
       <ServicesGrid />
 

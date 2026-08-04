@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HardHat, PhoneCall } from "lucide-react";
+import { HardHat, Calculator } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { company } from "@/lib/content";
 
 export function ContactCTA() {
   return (
@@ -39,9 +38,11 @@ export function ContactCTA() {
             <Button href="/contact" className="h-12 px-6">
               Холбоо барих
             </Button>
-            <Button href={`tel:${company.phone.split(",")[0].trim()}`} variant="outline-light" showArrow={false} className="h-12 px-6">
-              <PhoneCall className="mr-2 h-4 w-4 text-white/70" />
-              {company.phone.split(",")[0].trim()}
+            <Button href="/calculator" variant="outline-light" showArrow={false} className="h-12 px-6">
+              <span className="inline-flex items-center gap-2">
+                <Calculator className="h-[1em] w-[1em] shrink-0 text-white/70" />
+                <span>ЗАРДАЛ ТООЦООЛОХ</span>
+              </span>
             </Button>
           </div>
         </motion.div>

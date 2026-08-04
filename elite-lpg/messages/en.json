@@ -18,8 +18,8 @@
     "quickLinks": "Quick Links",
     "activities": "Activities",
     "activityLinks": {
-      "main": "Key Completed Projects",
-      "taxProject": "1% Tax Project",
+      "main": "Completed Projects",
+      "taxProject": "1% Tax Benefit Project",
       "allProjects": "All Projects",
       "news": "News & Updates"
     },

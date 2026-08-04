@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Flame, Home as HomeIcon, Factory, Wrench, Ruler, ClipboardCheck, ArrowUpRight } from "lucide-react";
+import { Flame, Building2, Factory, Wrench, Ruler, ClipboardCheck, Lightbulb, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 const services = [
@@ -11,9 +11,9 @@ const services = [
     desc: "LPG систем, шугам хоолойн угсралт, холболтын иж бүрэн ажил.",
   },
   {
-    icon: HomeIcon,
-    title: "Орон сууц, амины сууц",
-    desc: "Хувийн байшин, орон сууцны халаалтыг хийн зуухаар шийдэх.",
+    icon: Building2,
+    title: "Барилга, байгууламжийн халаалт",
+    desc: "Орон сууц, оффис, худалдааны төв, үйлдвэрийн барилга байгууламжийн халаалтыг хийн зуухаар шийдэх.",
   },
   {
     icon: Factory,
@@ -34,6 +34,16 @@ const services = [
     icon: ClipboardCheck,
     title: "Төслийн менежмент",
     desc: "Судалгаанаас ашиглалт хүртэлх бүрэн хяналт, зохион байгуулалт.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Зөвлөн туслах үйлчилгээ",
+    desc: "Хийн хангамж, халаалтын систем сонгох, төлөвлөхөд мэргэжлийн зөвлөгөө өгөх.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Аюулгүй ажиллагааны зааварчилгаа, сургалт, сертификат олгох",
+    desc: "Ажилтнуудад зориулсан аюулгүй ажиллагааны зааварчилгаа, сургалт явуулж, гэрчилгээ олгох.",
   },
 ];
 

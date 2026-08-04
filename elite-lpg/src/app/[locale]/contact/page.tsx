@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, MessagesSquare, Briefcase, PlayCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
@@ -58,10 +59,16 @@ export default function ContactPage() {
                   Сошиал медиа
                 </p>
                 <div className="flex gap-3">
-                  {[MessagesSquare, Briefcase, PlayCircle].map((Icon, i) => (
+                  {[
+                    { Icon: FaFacebookF, href: company.socials.facebook },
+                    { Icon: FaLinkedinIn, href: company.socials.linkedin },
+                    { Icon: FaYoutube, href: company.socials.youtube },
+                  ].map(({ Icon, href }, i) => (
                     <a
                       key={i}
-                      href="#"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="grid h-11 w-11 place-items-center rounded-full border border-ink/10 bg-white text-ink/60 transition-colors hover:border-brand/40 hover:text-brand"
                     >
                       <Icon className="h-4 w-4" />
@@ -70,15 +77,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="relative h-56 overflow-hidden rounded-[2rem] border border-ink/8 bg-ink/5">
-                <div className="absolute inset-0 grid place-items-center">
-                  <div className="text-center">
-                    <MapPin className="mx-auto h-6 w-6 text-brand" />
-                    <p className="mt-2 text-xs text-muted">
-                      Google Map — байршил удахгүй нэмэгдэнэ
-                    </p>
-                  </div>
-                </div>
+              <div className="relative h-56 overflow-hidden rounded-[2rem] border border-ink/8">
+                <iframe
+                  src={company.mapEmbed}
+                  title="Байршил — Google Maps"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
 

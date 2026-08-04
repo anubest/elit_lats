@@ -7,9 +7,9 @@ export const company = {
   email: "elit.lpg@gmail.com",
   website: "www.elite-lpg.mn",
   address: "СБД, 1-р хороо, Түмэн төв, 1 давхар",
-  mapEmbed: "",
+  mapEmbed: "https://maps.google.com/maps?q=47.910264,106.912382&z=16&output=embed",
   socials: {
-    facebook: "#",
+    facebook: "https://www.facebook.com/EliteLPGMongolia/",
     linkedin: "#",
     youtube: "#",
   },
@@ -38,7 +38,7 @@ export const companyMilestones = [
   },
   {
     year: "2021-2023",
-    phase: "ШТС-ийн угсралтын томоохон гэрээ",
+    phase: "ШТС-ийн угсралтын томоохон төслүүд",
     desc: '"Шунхлай трейдинг" ХХК-ийн 4 аймгийн нийт 11 шатахуун түгээх станцад автомашин хийгээр цэнэглэх станц (АХЦС) угсарч хүлээлгэн өгсөн.',
   },
   {
@@ -85,7 +85,7 @@ export const majorProjects = [
     year: "2025",
     title: "Silk Road төслийн хийн хангамж",
     client: "Номин холдинг",
-    category: "Худалдаа",
+    category: "Зураг төсөл",
     image: "/images/partners/nomin.png",
     imageType: "logo" as const,
     desc: "Silk Road төслийн хийн хангамжийн холболт угсралт, зураг төслийн ажил.",
@@ -291,7 +291,7 @@ export const whyChooseUs = [
 
 export const homeStats = [
   { value: 2017, suffix: "", label: "оноос хойш үйл ажиллагаа явуулж буй" },
-  { value: 70, suffix: "+", label: "амжилттай хэрэгжүүлсэн гэрээт ажил" },
+  { value: 100, suffix: "+", label: "амжилттай хэрэгжүүлсэн төслүүд" },
   { value: 24, suffix: "/7", label: "техникийн үйлчилгээ, дэмжлэг" },
   { value: 100, suffix: "%", label: "стандартын дагуу гүйцэтгэсэн ажил" },
 ];
@@ -306,6 +306,7 @@ export const industryExperts = [
 export const taxBenefitProgram = {
   legalBasis:
     "Аж ахуйн нэгжийн орлогын албан татварын тухай хуулийн 22.9 дэх заалт (баталсан: 2024.08.30, мөрдөж эхэлсэн: 2025.01.01)",
+  explainerVideoId: "b6tN_KFSNTg",
   pioneerNote:
     'Хийн зуухыг татварын хөнгөлөлтөд хамруулах эрх зүйн шинэ боломж нээгдсэний дараа "Элит Эл Пи Жи" ХХК салбарын хамгийн анхны төсөл болох Нийслэлийн ерөнхий боловсролын 117 болон 122 дугаар сургуулиудын халаалтын системийг хийн түлштэй системд шилжүүлэх ажлыг Ерөнхий гүйцэтгэгчээр амжилттай хийж гүйцэтгэсэн. Ингэснээр манай компани энэ чиглэлийн хамгийн баялаг, практик туршлагатай тэргүүлэгч гүйцэтгэгчээр тодорсон.',
   legalTimeline: [

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { FileText, Download, Award } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -18,51 +17,44 @@ export function LegalReference() {
           description="Төслийн санхүүжилтийн үндэслэл болсон ААНОАТ-ын тухай хуулийн 22.9 дэх заалттай холбоотой лавлагаа мэдээлэл."
         />
 
-        {/* Legal timeline */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {t.legalTimeline.map((item, i) => (
-            <motion.div
-              key={item.date}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="rounded-2xl border border-ink/8 bg-white p-5 shadow-sm"
-            >
-              <span className="inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark">
-                {item.date}
-              </span>
-              <p className="mt-3 text-sm leading-relaxed text-ink/75">
-                {item.event}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Reference infographic + legal timeline */}
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative h-72 overflow-hidden rounded-3xl border border-ink/8 bg-ink shadow-sm sm:h-96 lg:h-full"
+          >
+            <iframe
+              src={`https://www.youtube.com/embed/${t.explainerVideoId}`}
+              title={t.legalDocs[0].title}
+              className="absolute inset-0 h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </motion.div>
 
-        {/* Reference infographic */}
-        <div className="mt-6 flex justify-center">
-          {t.legalDocs.map((doc) => (
-            <motion.div
-              key={doc.src}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="w-full max-w-sm overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm"
-            >
-              <div className="relative h-48 w-full">
-                <Image
-                  src={doc.src}
-                  alt={doc.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <p className="p-5 text-sm font-medium leading-relaxed text-ink/80">
-                {doc.title}
-              </p>
-            </motion.div>
-          ))}
+          <div className="flex flex-col gap-4">
+            {t.legalTimeline.map((item, i) => (
+              <motion.div
+                key={item.date}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: i * 0.08 }}
+                className="flex-1 rounded-2xl border border-ink/8 bg-white p-5 shadow-sm"
+              >
+                <span className="inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-semibold text-brand-dark">
+                  {item.date}
+                </span>
+                <p className="mt-3 text-sm leading-relaxed text-ink/75">
+                  {item.event}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Specific official order document */}

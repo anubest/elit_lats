@@ -6,6 +6,7 @@ import { PageHero } from "@/components/shared/PageHero";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactCTA } from "@/components/home/ContactCTA";
+import { LegalReference } from "@/components/project/LegalReference";
 import { MajorProjectsGrid } from "@/components/business/MajorProjectsGrid";
 import { projects } from "@/lib/content";
 
@@ -24,6 +25,8 @@ export default function ProjectsPage() {
         description="Компанийн хэрэгжүүлсэн болон одоогоор баримтжуулсан онцлох төслүүдийн жагсаалт."
         breadcrumb={[{ label: "Нүүр", href: "/" }, { label: "Төслүүд" }]}
       />
+
+      <LegalReference />
 
       <section id="tax-projects" className="scroll-mt-28 py-20 lg:py-24">
         <Container>
